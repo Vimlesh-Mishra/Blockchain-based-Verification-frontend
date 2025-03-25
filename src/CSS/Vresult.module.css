@@ -1,0 +1,85 @@
+.master {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  position: fixed;
+  /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  color: white;
+}
+
+
+/* Video Background */
+.master::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  background: url('../video/video.mp4') no-repeat center center/cover;
+  z-index: -2;
+}
+
+/* Video Element */
+
+.videoContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+video {
+  width: 100%;
+  height: fit-content;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+video:hover {
+  transform: scale(1.05);
+}
+
+
+.test {
+  font-size: 50px;
+  font-family: 'Ivy', sans-serif;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  color: white;
+  text-shadow:
+    0 0 5px rgba(0, 230, 230, 0.8),
+    /* Light glow */
+    0 0 10px rgba(0, 230, 230, 0.6),
+    /* Medium glow */
+    0 0 15px rgba(0, 230, 230, 0.4);
+  /* Strong glow */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .test {
+    font-size: 2rem;
+  }
+
+  .p {
+    font-size: small;
+  }
+}
