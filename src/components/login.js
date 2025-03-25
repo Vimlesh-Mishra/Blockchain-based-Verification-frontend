@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../CSS/login.module.css';
-import { setSession, getSession } from '../SessionManager';  
+import { setSession, getSession } from '../SessionManager';
 import video from "../video/video.mp4";
 
 function Login() {
@@ -10,7 +10,7 @@ function Login() {
   const [password, setPassword] = useState('');
   const [loginStatus, setLoginStatus] = useState('');
   const [formError, setFormError] = useState(''); // State for form error message
-  const SERVER_URL = 'http://localhost:8000';
+  const SERVER_URL = 'https://backend-lake-delta-27.vercel.app/';
 
   // Redirect if already logged in
   useEffect(() => {
@@ -33,7 +33,7 @@ function Login() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }), 
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
@@ -53,47 +53,47 @@ function Login() {
       setLoginStatus('Error occurred. Please try again later.');
     }
   };
-  
+
   return (
     <div className={styles.videoContainer}>
       <video autoPlay loop muted className={styles.videoBackground}>
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-    <div className={styles.App}>
-      <div className={styles.mass}>
-        <h1 className={styles.test}>Login Page</h1>
-        <div className={styles.master}>
-          <i className={`fa fa-user ${styles['fa-user']}`}></i>
-          <input
-            type="text"
-            className={styles.inputcontainer}
-            placeholder="Username*"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+      <div className={styles.App}>
+        <div className={styles.mass}>
+          <h1 className={styles.test}>Login Page</h1>
+          <div className={styles.master}>
+            <i className={`fa fa-user ${styles['fa-user']}`}></i>
+            <input
+              type="text"
+              className={styles.inputcontainer}
+              placeholder="Username*"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className={styles.master}>
+            <i className={`fa fa-user ${styles['fa-user']}`}></i>
+            <input
+              type="password"
+              placeholder="Password*"
+              className={styles.inputcontainer}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="off"
+              required
+            />
+          </div>
+          <br />
+          {formError && <div className={styles.errormessage}>{formError}</div>}
+          <div className={styles.buttoncontainer}>
+            <button className={styles.button} onClick={handleLogin}>Login</button>
+          </div>
         </div>
-        <div className={styles.master}>
-        <i className={`fa fa-user ${styles['fa-user']}`}></i>
-          <input
-            type="password"
-            placeholder="Password*"
-            className={styles.inputcontainer}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete="off"
-            required
-          />
-        </div>
-        <br />
-      {formError && <div className={styles.errormessage}>{formError}</div>}
-      <div className={styles.buttoncontainer}>
-        <button className={styles.button} onClick={handleLogin}>Login</button>
+        {loginStatus && <div className={styles.loginstatus}>{loginStatus}</div>}
       </div>
-      </div>
-      {loginStatus && <div className={styles.loginstatus}>{loginStatus}</div>}
-    </div>
     </div>
   );
 }
