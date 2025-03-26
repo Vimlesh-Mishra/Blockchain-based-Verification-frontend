@@ -115,14 +115,6 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
 
 ---
 
-## 📊 Results  
-
-- ✅ **Accurate Verification:** Matches document hashes with blockchain records.  
-- ✅ **Efficient Storage:** Reduces gas fees by storing only essential data on-chain.  
-- ✅ **Improved Security:** Prevents tampering and ensures authenticity.  
-
----
-
 ## 🔮 Future Scope  
 
 🔹 **Decentralized IPFS Storage:** Transition to fully decentralized IPFS nodes.  
