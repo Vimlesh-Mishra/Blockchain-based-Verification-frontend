@@ -15,7 +15,7 @@ This project presents a blockchain-powered system that automates marksheet verif
 - [📊 Results](#-results)  
 - [🔮 Future Scope](#-future-scope)  
 - [📸 Screenshots & Demo](#-screenshots--demo)  
-- [⚙️ Setup & Execution](#-setup--execution)  
+- [⚙️ How to interact with live demo](#-how-to-interact-with-live-demo)  
 
 ---
 
@@ -137,34 +137,27 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
 
 4.Verification Result
 ![verification result](https://github.com/user-attachments/assets/0aeed399-f488-430e-b3f6-da436135e509)
-
-
-
-
-### 🔹 Screenshots   
- 
-
+ 4thm
 ### 🎥 Live Demo  
 🔗 **[Try the Live Demo](https://blockchain-based-verification-frontend.vercel.app/)**  
 
 ---
 
-## ⚙️ Setup & Execution  
+## ⚙️ How to interact with live demo?
 
-### 🔹 1) Clone the Repository  
-git clone <repository_url>
-cd <project_directory>
-### 🔹 2) Install Dependencies
-npm install
-### 🔹 3) Start Local Blockchain (Ganache)
-Open **Ganache** to set up a local Ethereum blockchain.
-### 🔹 4) Deploy Smart Contracts
-npx hardhat run scripts/deploy.js --network ganache
-### 🔹 5) Run the Application
-npm start
-### 🔹 6) Connect MetaMask
--Add the local or test network to MetaMask.
--Import your test wallet with ETH for transactions.
+Before interacting with the live demo please ensure the following... 
+
+### 🔹 1) Create a metamask wallet 
+Simply watch any YT video and do as directed. Add it as an extension in your browser.
+### 🔹 2) Add Holesky Testnet to MetaMask 
+Open MetaMask and click on the network dropdown (top left corner) enable testnets(checkbox) search and add Holesky.
+### 🔹 3) Get Test ETH from Google Faucet
+Search for holesky faucets and click on the first link. Enter your MetaMask Wallet Address and request test ETH. Now you are read to use the demo.
+### 🔹 4) To upload a document you need to login
+Login as "Admin" (username) and enter password "112233". Now upload the desired document Click on Add Student and enter details(note that PRN is any 16 digit number often it is the seat number). As the smart contract is deployed on testnet uploading might take upto 30-40 seconds.
+### 🔹 5) Verify the same uploaded document.
+After done with uploading , logout , and click on verify. Verifiy the uploaded document and also make desired changes in this document and verify it again , it shouldn't be verified by the system.
+
 
 
   
