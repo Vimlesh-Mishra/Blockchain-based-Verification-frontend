@@ -37,7 +37,7 @@ The system is designed for **universities, employers, and verification authoriti
 Traditional marksheet verification methods:  
 ❌ Depend on centralized databases vulnerable to hacking.  
 ❌ Are time-consuming and costly due to manual verification.  
-❌ Lack scalability, leading to **high gas fees**.  
+❌ Lack scalability, leading to high **Verification cost** 
 ❌ Cannot provide **automated and tamper-proof validation**.  
 
 This project **addresses** these limitations by implementing **blockchain and IPFS-based verification**.  
@@ -63,7 +63,7 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
 2️⃣ **Upload Process:**  
    - Enter student details (name, PRN).  
    - Upload marksheet (PDF).  
-   - Validate before proceeding.  
+   - Validate before proceeding.
 3️⃣ **Transaction & Storage:**  
    - Confirm transaction & pay gas fees.  
    - Compute **Keccak-256 hash** of the document.  
