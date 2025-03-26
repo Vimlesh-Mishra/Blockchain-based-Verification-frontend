@@ -1,186 +1,166 @@
-# 📄 Blockchain-Based Document Verification
+# 📄 Blockchain-Based Document Verification  
 
-A Secure and Tamper-Proof Solution for Academic Records
+### A Secure and Tamper-Proof Solution for Academic Records  
 
-This project presents a blockchain-powered system that automates marksheet verification, enhances security, and reduces costs. It leverages Ethereum smart contracts, decentralized storage via IPFS, and modern web technologies to provide a scalable, efficient, and fraud-resistant solution for academic record validation.
+This project presents a blockchain-powered system that automates marksheet verification, enhances security, and reduces costs. It leverages Ethereum smart contracts, decentralized storage via IPFS, and modern web technologies to provide a scalable, efficient, and fraud-resistant solution for academic record validation.  
 
-## 📑 Table of Contents
+## 📑 Table of Contents  
 
-- [🚀 Overview](#-overview)
-- [❓ Problem Definition](#-problem-definition)
-- [🎯 Objectives](#-objectives)
-- [📝 Methodology](#-methodology)
-- [⚙️ Implementation](#-implementation)
-- [🗺 System Architecture & Data Flow](#-system-architecture--data-flow)
-- [📊 Results](#-results)
-- [🔮 Future Scope](#-future-scope)
-- [🔚 Conclusion](#-conclusion)
-- [📚 References](#-references)
-- [📸 Screenshots & Demo](#-screenshots--demo)
-- [⚙️ Setup & Execution](#-setup--execution)
+- [🚀 Overview](#-overview)  
+- [❓ Problem Definition](#-problem-definition)  
+- [🎯 Objectives](#-objectives)  
+- [📝 Methodology](#-methodology)  
+- [⚙️ Implementation](#-implementation)  
+- [🗺 System Architecture & Data Flow](#-system-architecture--data-flow)  
+- [📊 Results](#-results)  
+- [🔮 Future Scope](#-future-scope)  
+- [📸 Screenshots & Demo](#-screenshots--demo)  
+- [⚙️ Setup & Execution](#-setup--execution)  
 
 ---
 
-## 🚀 Overview
+## 🚀 Overview  
 
-This project presents a blockchain-based marksheet verification system that addresses the challenges of fake academic credentials and document tampering. By integrating Ethereum smart contracts with decentralized storage (IPFS via Pinata), the system offers:
+This project is a **blockchain-based marksheet verification system** that prevents **fake academic credentials** and document tampering. It integrates **Ethereum smart contracts** with **decentralized storage (IPFS via Pinata)**, offering:  
 
-- *Immutable Storage:* Once a document’s hash is recorded on the blockchain, it cannot be altered.  
-- *Decentralized Document Management:* Marksheets are stored off-chain on IPFS for enhanced security and accessibility.  
-- *Cost Optimization:* Batch uploading and verifier-paid transactions help reduce gas fees.  
-- *Scalability:* The research explores NFT-based academic credentials for future enhancements.
+- 🔒 **Immutable Storage:** Once a document’s hash is recorded on the blockchain, it cannot be altered.  
+- 🌍 **Decentralized Document Management:** Marksheets are stored on **IPFS** for security and accessibility.  
+- 💰 **Cost Optimization:** Batch uploads and **verifier-paid transactions** help reduce gas fees.  
+- 📈 **Scalability:** Future enhancements include **NFT-based academic credentials**.  
 
-The system aims to automate and secure academic record verification for universities, employers, and credential verification bodies worldwide.
-
----
-
-## ❓ Problem Definition
-
-Traditional marksheet verification methods are:
-- Dependent on centralized databases vulnerable to hacking and unauthorized modifications.
-- Costly and time-consuming due to manual verification processes.
-- Limited in scalability as they handle individual document uploads, leading to high gas fees.
-- Inadequate in providing automated and tamper-proof validation.
+The system is designed for **universities, employers, and verification authorities** worldwide.  
 
 ---
 
-## 🎯 Objectives
+## ❓ Problem Definition  
 
-This research aims to develop a cost-effective, scalable, and fraud-resistant marksheet verification system that:
+Traditional marksheet verification methods:  
+❌ Depend on centralized databases vulnerable to hacking.  
+❌ Are time-consuming and costly due to manual verification.  
+❌ Lack scalability, leading to **high gas fees**.  
+❌ Cannot provide **automated and tamper-proof validation**.  
 
-1. 🔄 *Automates marksheet verification* using blockchain and IPFS.  
-2. 💰 *Optimizes gas fees* through batch processing and verifier-paid transactions.  
-3. 🔐 *Ensures security and transparency* with immutable smart contracts.  
-4. 🎓 *Explores NFT-based academic credentials* for future scalability.
-
-By addressing these challenges, the solution provides a practical and adoptable framework for secure academic record validation.
-
----
-
-## 📝 Methodology
-
-The system is divided into two primary flows:
-
-### A) Uploader Flow (University/Authorized Admin)
-- *Authentication:* Admins log in using MetaMask to verify their identity.
-- *Document Upload:*
-  - Enter student details (name, PRN).
-  - Upload the marksheet (PDF).
-  - Validate the document before proceeding.
-- *Transaction & Storage:*
-  - Confirm the transaction by paying gas fees.
-  - Compute the Keccak-256 hash of the document.
-  - Upload the file to IPFS (via Pinata) to obtain a unique CID.
-  - Record the document hash, IPFS CID, and student details on the Ethereum blockchain via a smart contract.
-
-### B) Verifier Flow (Foreign University/Employer)
-- *Authentication:* Verifiers log in via MetaMask.
-- *Verification Process:*
-  - Upload the marksheet.
-  - The system computes the document hash (Keccak-256).
-  - Compare the computed hash with the one stored on the blockchain.
-  - Display student details if the hash matches, otherwise indicate a verification failure.
+This project **addresses** these limitations by implementing **blockchain and IPFS-based verification**.  
 
 ---
 
-## ⚙️ Implementation
+## 🎯 Objectives  
 
-### Software Stack
+This system aims to provide a **cost-effective, scalable, and fraud-resistant solution** for academic document verification.  
 
-- *Frontend:*
-  - React.js
-- *Backend:*
-  - Node.js & Express.js
-  - MongoDB (for RBAC)
-- *Blockchain Components:*
-  - Ethereum Blockchain
-  - Solidity (Smart Contracts)
-  - Ethers.js (Web3 Integration)
-  - Hardhat (Development & Testing)
-  - Ganache (Local Blockchain for Testing)
-  - MetaMask (Wallet & Transactions)
-
-### Key Features
-
-- *Smart Contract Deployment & Interaction*
-- *File Upload & Hash Storage (Keccak-256 & IPFS)*
-- *Role-Based Access Control (RBAC)*
-- *Gas Fee Optimization & Batch Upload*
-- *Verifier-Paid Gas Fees*
+### 🔹 Key Goals:  
+1. ✅ **Automate marksheet verification** using blockchain and IPFS.  
+2. ✅ **Optimize gas fees** with batch processing and verifier-paid transactions.  
+3. ✅ **Ensure security & transparency** via immutable smart contracts.  
+4. ✅ **Explore NFT-based academic credentials** for future scalability.  
 
 ---
 
-## 🗺 System Architecture & Data Flow
+## 📝 Methodology  
 
-1. *Web Application (Frontend):* User-friendly UI for uploading and verifying documents.
-2. *IPFS (via Pinata):* Decentralized storage for marksheets.
-3. *Ethereum Blockchain:* Immutable storage of document hashes and metadata.
-4. *Verification Process:* Hash-based comparison to authenticate documents.
+### 🔹 A) Uploader Flow (University/Admin)  
+1️⃣ **Authentication:** Admins log in via **MetaMask**.  
+2️⃣ **Upload Process:**  
+   - Enter student details (name, PRN).  
+   - Upload marksheet (PDF).  
+   - Validate before proceeding.  
+3️⃣ **Transaction & Storage:**  
+   - Confirm transaction & pay gas fees.  
+   - Compute **Keccak-256 hash** of the document.  
+   - Store on **IPFS (via Pinata)** to get a **CID**.  
+   - Record hash & IPFS CID on **Ethereum blockchain**.  
 
----
-
-## 📊 Results
-
-- *Accurate Verification:* Matches computed document hashes with blockchain records.
-- *Efficient Storage:* Reduces gas fees by storing only essential data on-chain.
-- *Improved Security:* Prevents tampering with academic records.
-
----
-
-## 🔮 Future Scope
-
-- *Decentralized IPFS Storage:* Transition to fully decentralized nodes or integrate Filecoin.
-- *NFT-Based Credentials:* Mint academic certificates as NFTs with on-chain metadata.
-- *Enhanced Role-Based Access:* Implement smart contract-based RBAC.
-- *Layer 2 Solutions:* Utilize Polygon PoS for reduced gas fees and increased scalability.
+### 🔹 B) Verifier Flow (Foreign University/Employer)  
+1️⃣ **Authentication:** Verifiers log in via **MetaMask**.  
+2️⃣ **Verification Process:**  
+   - Upload the marksheet.  
+   - System computes the **Keccak-256 hash**.  
+   - Compares it with the blockchain hash.  
+   - **If matched**, display student details; otherwise, verification fails.  
 
 ---
 
-## 📸 Screenshots & Demo
+## ⚙️ Implementation  
 
-### 🔹 Screenshots
-![Uploader Dashboard](./screenshots/uploader_dashboard.png)
-![Verification Process](./screenshots/verification_process.png)
+### 🔹 Software Stack  
 
-### 🎥 Demo Video
-[![Watch the Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+- **Frontend:** React.js  
+- **Backend:** Node.js, Express.js, MongoDB (RBAC)  
+- **Blockchain Components:**  
+  - Ethereum Smart Contracts (Solidity)  
+  - Ethers.js (Web3 Integration)  
+  - Hardhat (Deployment & Testing)  
+  - Ganache (Local Blockchain for Testing)  
+  - MetaMask (Wallet & Transactions)  
 
----
+### 🔹 Key Features  
 
-## 🔚 Conclusion
-
-This project provides an efficient, secure, and decentralized solution for academic document verification. By leveraging blockchain and IPFS, it eliminates fraud, reduces verification time, and enhances security. Future enhancements, such as NFT credentials and Layer 2 solutions, will further improve scalability and adoption.
-
----
-
-## 📚 References
-
-- Ethereum Documentation: [ethereum.org](https://ethereum.org/)
-- IPFS & Pinata: [ipfs.io](https://ipfs.io/) | [pinata.cloud](https://www.pinata.cloud/)
-- Solidity Documentation: [soliditylang.org](https://soliditylang.org/)
+✅ **Smart Contract Deployment & Interaction**  
+✅ **File Upload & Hash Storage (Keccak-256 & IPFS)**  
+✅ **Role-Based Access Control (RBAC)**  
+✅ **Gas Fee Optimization & Batch Upload**  
+✅ **Verifier-Paid Gas Fees**  
 
 ---
 
-## ⚙️ Setup & Execution
+## 🗺 System Architecture & Data Flow  
 
-1. *Clone the Repository:*
-   bash
-   git clone <repository_url>
-   cd <project_directory>
-   
-2. *Install Dependencies:*
-   bash
-   npm install
-   
-3. *Start Ganache:*
-   - Launch Ganache to set up a local Ethereum blockchain.
-4. *Deploy Smart Contracts:*
-   bash
-   npx hardhat run scripts/deploy.js --network ganache
-   
-5. *Run the Application:*
-   bash
-   npm start
-   
-6. *Connect MetaMask:*
-   - Configure MetaMask to the appropriate network (local or live).
+📌 **Frontend (React.js):** Provides a user-friendly UI.  
+📌 **IPFS (via Pinata):** Decentralized storage for marksheets.  
+📌 **Ethereum Blockchain:** Stores document hashes for verification.  
+📌 **Verification Process:** Ensures tamper-proof authentication via hashing.  
+
+---
+
+## 📊 Results  
+
+- ✅ **Accurate Verification:** Matches document hashes with blockchain records.  
+- ✅ **Efficient Storage:** Reduces gas fees by storing only essential data on-chain.  
+- ✅ **Improved Security:** Prevents tampering and ensures authenticity.  
+
+---
+
+## 🔮 Future Scope  
+
+🔹 **Decentralized IPFS Storage:** Transition to fully decentralized IPFS nodes.  
+🔹 **NFT-Based Credentials:** Convert academic certificates into **NFTs** with metadata.  
+🔹 **Enhanced RBAC:** Smart contract-based role management.  
+🔹 **Layer 2 Solutions:** Use **Polygon PoS** for lower gas fees & scalability.  
+
+---
+
+## 📸 Screenshots & Demo  
+
+### 🔹 Screenshots  
+![Uploader Dashboard](./screenshots/uploader_dashboard.png)  
+![Verification Process](./screenshots/verification_process.png)  
+
+### 🎥 Live Demo  
+🔗 **[Try the Live Demo](https://blockchain-based-verification-frontend.vercel.app/)**  
+
+---
+
+## ⚙️ Setup & Execution  
+
+### 🔹 1) Clone the Repository  
+```sh
+git clone <repository_url>
+cd <project_directory>
+### 🔹 2) Install Dependencies
+```sh
+npm install
+### 🔹 3) Start Local Blockchain (Ganache)
+Open **Ganache** to set up a local Ethereum blockchain.
+### 🔹 4) Deploy Smart Contracts
+```sh
+npx hardhat run scripts/deploy.js --network ganache
+### 🔹 5) Run the Application
+```sh
+npm start
+### 🔹 6) Connect MetaMask
+-Add the local or test network to MetaMask.
+
+-Import your test wallet with ETH for transactions.
+
+
+  
