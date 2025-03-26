@@ -129,6 +129,7 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
 ![upload](https://github.com/user-attachments/assets/832a731d-6177-4d3f-84e0-106b4c4d7bac)
 
 2.Uploading successful
+
 ![upload_Success](https://github.com/user-attachments/assets/c058ff61-863c-4cb3-b530-7cd51b2bef5c)
 
 3.Verifying document
