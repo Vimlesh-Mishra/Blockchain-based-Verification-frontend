@@ -37,7 +37,7 @@ The system is designed for **universities, employers, and verification authoriti
 Traditional marksheet verification methods:  
 ❌ Depend on centralized databases vulnerable to hacking.  
 ❌ Are time-consuming and costly due to manual verification.  
-❌ Lack scalability, leading to high **Verification cost** 
+❌ Lack scalability, leading to high **Verification cost**. 
 ❌ Cannot provide **automated and tamper-proof validation**.  
 
 This project **addresses** these limitations by implementing **blockchain and IPFS-based verification**.  
