@@ -50,7 +50,7 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
 
 ### 🔹 Key Goals:  
 1. ✅ **Automate marksheet verification** using blockchain and IPFS.  
-2. ✅ **Optimize gas fees** with batch processing and verifier-paid transactions.  
+2. ✅ **Optimize document verification cost and time**.  
 3. ✅ **Ensure security & transparency** via immutable smart contracts.  
 4. ✅ **Explore NFT-based academic credentials** for future scalability.  
 
@@ -64,6 +64,7 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
    - Enter student details (name, PRN).  
    - Upload marksheet (PDF).  
    - Validate before proceeding.
+     
 3️⃣ **Transaction & Storage:**  
    - Confirm transaction & pay gas fees.  
    - Compute **Keccak-256 hash** of the document.  
