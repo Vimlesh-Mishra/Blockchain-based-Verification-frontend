@@ -10,7 +10,7 @@ function Login() {
   const [password, setPassword] = useState('');
   const [loginStatus, setLoginStatus] = useState('');
   const [formError, setFormError] = useState(''); // State for form error message
-  const SERVER_URL = 'https://backend-lake-delta-27.vercel.app/';
+  // const SERVER_URL = 'https://backend-lake-delta-27.vercel.app/';
 
   // Redirect if already logged in
   useEffect(() => {
