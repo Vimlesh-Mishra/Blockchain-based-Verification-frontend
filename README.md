@@ -1,70 +1,202 @@
-# Getting Started with Create React App
+**Blockchain-Based Document Verification**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Secure and Tamper-Proof Solution for Academic Records
 
-## Available Scripts
+This project presents a blockchain-powered system that automates marksheet verification, enhances security, and reduces costs. It leverages Ethereum smart contracts, decentralized storage via IPFS, and modern web technologies to provide a scalable, efficient, and fraud-resistant solution for academic record validation.
 
-In the project directory, you can run:
+🚀 Overview
 
-### `npm start`
+This project presents a blockchain-based marksheet verification system that addresses the challenges of fake academic credentials and document tampering. By integrating Ethereum smart contracts with decentralized storage (IPFS via Pinata), the system offers:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Immutable Storage: Once a document’s hash is recorded on the blockchain, it cannot be altered.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Decentralized Document Management: Marksheets are stored off-chain on IPFS for enhanced security and accessibility.
 
-### `npm test`
+Cost Optimization: Batch uploading and verifier-paid transactions help reduce gas fees.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Scalability: The research explores NFT-based academic credentials for future enhancements.
 
-### `npm run build`
+The system aims to automate and secure academic record verification for universities, employers, and credential verification bodies worldwide.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+❓ Problem Definition
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Traditional marksheet verification methods are:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Dependent on centralized databases vulnerable to hacking and unauthorized modifications.
 
-### `npm run eject`
+Costly and time-consuming due to manual verification processes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Limited in scalability as they handle individual document uploads, leading to high gas fees.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Inadequate in providing automated and tamper-proof validation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🎯 Objectives
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This research aims to develop a cost-effective, scalable, and fraud-resistant marksheet verification system that:
 
-## Learn More
+🔄 Automates marksheet verification using blockchain and IPFS.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+💰 Optimizes gas fees through batch processing and verifier-paid transactions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔐 Ensures security and transparency with immutable smart contracts.
 
-### Code Splitting
+🎓 Explores NFT-based academic credentials for future scalability.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+By addressing these challenges, the solution provides a practical and adoptable framework for secure academic record validation.
 
-### Analyzing the Bundle Size
+📝 Methodology
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+A) Uploader Flow (University/Authorized Admin)
 
-### Making a Progressive Web App
+Authentication: Admins log in using MetaMask to verify their identity.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Document Upload:
 
-### Advanced Configuration
+Enter student details (name, PRN).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Upload the marksheet (PDF).
 
-### Deployment
+Validate the document before proceeding.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Transaction & Storage:
 
-### `npm run build` fails to minify
+Confirm the transaction by paying gas fees.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Compute the Keccak-256 hash of the document.
+
+Upload the file to IPFS (via Pinata) to obtain a unique CID.
+
+Record the document hash, IPFS CID, and student details on the Ethereum blockchain via a smart contract.
+
+B) Verifier Flow (Foreign University/Employer)
+
+Authentication: Verifiers log in via MetaMask.
+
+Verification Process:
+
+Upload the marksheet.
+
+The system computes the document hash (Keccak-256).
+
+Compare the computed hash with the one stored on the blockchain.
+
+Display student details if the hash matches, otherwise indicate a verification failure.
+
+⚙️ Implementation
+
+Software Stack
+
+Frontend: React.js
+
+Backend: Node.js & Express.js, MongoDB (for RBAC)
+
+Blockchain Components:
+
+Ethereum Blockchain
+
+Solidity (Smart Contracts)
+
+Ethers.js (Web3 Integration)
+
+Hardhat (Development & Testing)
+
+Ganache (Local Blockchain for Testing)
+
+MetaMask (Wallet & Transactions)
+
+Key Features
+
+Smart Contract Deployment & Interaction
+
+File Upload & Hash Storage (Keccak-256 & IPFS)
+
+Role-Based Access Control (RBAC)
+
+Gas Fee Optimization & Batch Upload
+
+Verifier-Paid Gas Fees
+
+🗺 System Architecture & Data Flow
+
+Web Application (Frontend): User-friendly UI for uploading and verifying documents.
+
+IPFS (via Pinata): Decentralized storage for marksheets.
+
+Ethereum Blockchain: Immutable storage of document hashes and metadata.
+
+Verification Process: Hash-based comparison to authenticate documents.
+
+📊 Results
+
+Accurate Verification: Matches computed document hashes with blockchain records.
+
+Efficient Storage: Reduces gas fees by storing only essential data on-chain.
+
+Improved Security: Prevents tampering with academic records.
+
+🔮 Future Scope
+
+Decentralized IPFS Storage: Transition to fully decentralized nodes or integrate Filecoin.
+
+NFT-Based Credentials: Mint academic certificates as NFTs with on-chain metadata.
+
+Enhanced Role-Based Access: Implement smart contract-based RBAC.
+
+Layer 2 Solutions: Utilize Polygon PoS for reduced gas fees and increased scalability.
+
+📸 Screenshots & Demo
+
+🔗 Live Demo
+
+🌐 Click here to access the live project
+
+🎥 Demo Video
+
+
+
+🔚 Conclusion
+
+This project provides an efficient, secure, and decentralized solution for academic document verification. By leveraging blockchain and IPFS, it eliminates fraud, reduces verification time, and enhances security. Future enhancements, such as NFT credentials and Layer 2 solutions, will further improve scalability and adoption.
+
+📚 References
+
+Ethereum Documentation: ethereum.org
+
+IPFS & Pinata: ipfs.io | pinata.cloud
+
+Solidity Documentation: soliditylang.org
+
+⚙️ Setup & Execution
+
+**Prerequisites**
+
+-Node.js & npm installed
+
+-MetaMask browser extension
+
+-Hardhat & Ganache installed
+
+-Ethereum testnet account with test ETH
+
+**Installation & Running**
+
+-Clone the Repository:
+
+git clone <repository_url>
+cd <project_directory>
+
+-Install Dependencies:
+
+npm install
+
+-Deploy Smart Contracts:
+
+npx hardhat run scripts/deploy.js --network holesky
+
+-Run the Application:
+
+npm start
+
+-Connect MetaMask to the correct network
+
+Now you’re ready to interact with the blockchain-based marksheet verification system! 🚀
