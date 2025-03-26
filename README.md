@@ -127,10 +127,13 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
 ## 📸 Screenshots & Demo  
 1.Uploading document
 ![upload](https://github.com/user-attachments/assets/832a731d-6177-4d3f-84e0-106b4c4d7bac)
+
 2.Uploading successful
 ![upload_Success](https://github.com/user-attachments/assets/c058ff61-863c-4cb3-b530-7cd51b2bef5c)
+
 3.Verifying document
 ![verifying](https://github.com/user-attachments/assets/d739aa6e-b7e4-431a-8f68-dfe4965db54c)
+
 4.Verification Result
 ![verification result](https://github.com/user-attachments/assets/0aeed399-f488-430e-b3f6-da436135e509)
 
