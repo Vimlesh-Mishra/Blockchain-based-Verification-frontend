@@ -143,23 +143,18 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
 ## ⚙️ Setup & Execution  
 
 ### 🔹 1) Clone the Repository  
-```sh
 git clone <repository_url>
 cd <project_directory>
 ### 🔹 2) Install Dependencies
-```sh
 npm install
 ### 🔹 3) Start Local Blockchain (Ganache)
 Open **Ganache** to set up a local Ethereum blockchain.
 ### 🔹 4) Deploy Smart Contracts
-```sh
 npx hardhat run scripts/deploy.js --network ganache
 ### 🔹 5) Run the Application
-```sh
 npm start
 ### 🔹 6) Connect MetaMask
 -Add the local or test network to MetaMask.
-
 -Import your test wallet with ETH for transactions.
 
 
