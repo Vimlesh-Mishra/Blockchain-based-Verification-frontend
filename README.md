@@ -137,7 +137,7 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
 
 4.Verification Result
 ![verification result](https://github.com/user-attachments/assets/0aeed399-f488-430e-b3f6-da436135e509)
- 4thm
+ 
 ### 🎥 Live Demo  
 🔗 **[Try the Live Demo](https://blockchain-based-verification-frontend.vercel.app/)**  
 
