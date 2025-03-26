@@ -126,9 +126,8 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
 
 ## 📸 Screenshots & Demo  
 
-### 🔹 Screenshots  
-![Uploader Dashboard](./screenshots/uploader_dashboard.png)  
-![Verification Process](./screenshots/verification_process.png)  
+### 🔹 Screenshots   
+ 
 
 ### 🎥 Live Demo  
 🔗 **[Try the Live Demo](https://blockchain-based-verification-frontend.vercel.app/)**  
