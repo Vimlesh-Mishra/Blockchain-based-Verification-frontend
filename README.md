@@ -92,7 +92,8 @@ This system aims to provide a **cost-effective, scalable, and fraud-resistant so
   - Ethereum Smart Contracts (Solidity)  
   - Ethers.js (Web3 Integration)  
   - Hardhat (Deployment & Testing)  
-  - Ganache (Local Blockchain for Testing)  
+  - Ganache (Local Blockchain for Testing)
+  - Holesky (Ethereum's public testnet)
   - MetaMask (Wallet & Transactions)  
 
 ### 🔹 Key Features  
